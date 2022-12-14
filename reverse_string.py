@@ -27,9 +27,19 @@ s[i] is a printable ascii character.
 
 class Solution:
     def reverseString(self, s: List[str]) -> None:
-       """
-       Do not return anything, modify s in-place instead.
-       """
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        i: int = 0
+        j: int = len(s) - 1
+        while i < j:
+            tmp: str = s[i]
+            s[i] = s[j]
+            s[j] = tmp
+            i = i + 1
+            j = j - 1
+
+        return s
 
 
 if __name__ == '__main__':
